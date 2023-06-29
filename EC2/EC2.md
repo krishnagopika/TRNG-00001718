@@ -104,16 +104,16 @@ Note: Windows <10 uses putty, EC2 insatance connect.
 SSH with MAC and linix: 
 
 ```
-ssh -i filename.pem ec2user@publicip
+ssh -i filename.pem ec2-user@publicip
 ``` 
 
-Note: chmod 0500 filename.pem to resolve the unprotected file error.
+Note: chmod 0400 filename.pem to resolve the unprotected file error.
 
 SSH with Windows 10:
 - powershell
   
 ```
-ssh -i filename.pem ec2user@publicip
+ssh -i filename.pem ec2-user@publicip
 ``` 
 
 Note: if there are any permission issues rectify security setting role in pem file properties
@@ -139,6 +139,7 @@ Note: Never prowide aws configure credentials to EC2 instnce because nayone wo c
    - Can specify instance attributes (Instance Tyoe, Region, Tenancy, OS) 
    - no upfront, partial upfront, app upfront
    - Reserved Instance scopes : Regional or Zonal
+   - Convertable: chnage instance properties 
 - Savings plans (1&3) years : commit to an ammount of usage, long workload
 - Spot Instances: shprt workloads, cheap, can loose instances (less reliable)
 - Capacity reservations: reserve capacity in a specific AZ for any duration
