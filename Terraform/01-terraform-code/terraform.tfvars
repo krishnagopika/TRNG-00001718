@@ -1,0 +1,1 @@
+aws_region_name = "us-west-1"
